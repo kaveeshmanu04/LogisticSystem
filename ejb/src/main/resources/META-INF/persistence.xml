@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+<persistence-unit name="WebPU" transaction-type="JTA">
+    <jta-data-source>jdbc/LG_System_db</jta-data-source>
+    <!-- Add your entity classes here -->
+    <!-- For example: -->
+    <properties>
+        <!-- Database connection properties -->
+        <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/LG_System_db?useSSL=false"/>
+        <property name="jakarta.persistence.jdbc.user" value="LG_System_db"/>
+        <property name="jakarta.persistence.jdbc.password" value="kavee04"/>
+
+        <!-- Configure schema generation -->
+        <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
+
+        <!-- Disable the shared cache mode if not needed -->
+        <!-- <shared-cache-mode>DISABLE_SELECTIVE</shared-cache-mode> -->
+    </properties>
+</persistence-unit>
+</persistence>
